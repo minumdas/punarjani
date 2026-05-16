@@ -1,4 +1,4 @@
-const eventsData = Object.values(import.meta.globEager('../data/events/*.json')).map(module => module.default || module).sort((a, b) => new Date(a.date) - new Date(b.date));
+const eventsData = Object.values(import.meta.glob('../data/events/*.json', { eager: true })).map(module => module.default || module).sort((a, b) => new Date(a.date) - new Date(b.date));
 
 export default function Events() {
   return (

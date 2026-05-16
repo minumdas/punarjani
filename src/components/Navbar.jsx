@@ -4,7 +4,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const PHONE_NUMBER = "+919744499119";
-  const links = ["Home", "Services", "About", "Treatments", "Testimonials", "Contact"];
+  const links = ["Home", "Services", "Gallery", "Events", "Videos", "About", "Treatments", "Testimonials", "Contact"];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

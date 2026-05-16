@@ -1,4 +1,4 @@
-const galleryData = Object.values(import.meta.globEager('../data/gallery/*.json')).map(module => module.default || module).sort((a, b) => a.order - b.order);
+const galleryData = Object.values(import.meta.glob('../data/gallery/*.json', { eager: true })).map(module => module.default || module).sort((a, b) => a.order - b.order);
 
 export default function Gallery() {
   return (

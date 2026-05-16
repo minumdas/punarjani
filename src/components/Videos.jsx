@@ -1,4 +1,4 @@
-const videosData = Object.values(import.meta.globEager('../data/videos/*.json')).map(module => module.default || module);
+const videosData = Object.values(import.meta.glob('../data/videos/*.json', { eager: true })).map(module => module.default || module);
 
 export default function Videos() {
   return (

@@ -2,6 +2,9 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import Gallery from './components/Gallery'
+import Events from './components/Events'
+import Videos from './components/Videos'
 import About from './components/About'
 import Facility from './components/Facility'
 import Treatments from './components/Treatments'
@@ -21,6 +24,9 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <Gallery />
+      <Events />
+      <Videos />
       <About />
       <Facility />
       <Treatments />
