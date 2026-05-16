@@ -54,6 +54,8 @@ body {
   margin: 0;
 }
 
+html { scroll-behavior: smooth; }
+
 #root {
   width: 100%;
   max-width: 1126px;
