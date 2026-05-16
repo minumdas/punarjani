@@ -27,8 +27,8 @@ export default function Navbar() {
         .nav-links a:hover{color:#6b8f3d}
         .book-btn{border:0;background:#698d39;color:white;border-radius:999px;padding:11px 18px;font-weight:750;cursor:pointer;box-shadow:0 14px 30px rgba(105,141,57,.2)}
         .menu-btn{display:none;border:0;background:#eef3df;border-radius:999px;padding:10px 12px;color:#25321f}
-        .mobile-panel{display:none}
-        @media(max-width:820px){.nav-links,.book-btn{display:none}.menu-btn{display:block}.mobile-panel{display:flex;position:fixed;inset:72px 16px auto 16px;background:#fffaf0;border:1px solid #edf0df;border-radius:24px;padding:18px;box-shadow:0 20px 70px rgba(71,61,38,.14);flex-direction:column;gap:14px;z-index:1100}.mobile-panel a{text-decoration:none;color:#25321f;font-weight:700}.mobile-panel button{display:block;width:100%}}
+        .mobile-panel{display:flex;position:fixed;inset:72px 16px auto 16px;background:#fffaf0;border:1px solid #edf0df;border-radius:24px;padding:18px;box-shadow:0 20px 70px rgba(71,61,38,.14);flex-direction:column;gap:14px;z-index:1100;opacity:0;transform:translateY(-12px);pointer-events:none;transition:opacity .28s ease,transform .28s ease}.mobile-panel.open{opacity:1;transform:translateY(0);pointer-events:auto}
+        @media(max-width:820px){.nav-links,.book-btn{display:none}.menu-btn{display:block}.mobile-panel{display:flex}.mobile-panel a{text-decoration:none;color:#25321f;font-weight:700}.mobile-panel button{display:block;width:100%}}
       `}</style>
       <header className={`nav-wrap ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-inner">
@@ -38,7 +38,7 @@ export default function Navbar() {
           <button className="menu-btn" onClick={() => setOpen(!open)}>☰</button>
         </div>
       </header>
-      {open && <div className="mobile-panel" onClick={() => setOpen(false)}>{links.map(l => <a key={l} href={`#${l.toLowerCase()}`}>{l}</a>)}<button className="book-btn" onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}>Book Consultation</button></div>}
+      <div className={`mobile-panel${open ? " open" : ""}`} onClick={() => setOpen(false)}>{links.map(l => <a key={l} href={`#${l.toLowerCase()}`}>{l}</a>)}<button className="book-btn" onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}>Book Consultation</button></div>
     </>
   );
 }
