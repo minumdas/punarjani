@@ -28,7 +28,7 @@ export default function Navbar() {
         .book-btn{border:0;background:#698d39;color:white;border-radius:999px;padding:11px 18px;font-weight:750;cursor:pointer;box-shadow:0 14px 30px rgba(105,141,57,.2)}
         .menu-btn{display:none;border:0;background:#eef3df;border-radius:999px;padding:10px 12px;color:#25321f}
         .mobile-panel{display:none}
-        @media(max-width:820px){.nav-links,.book-btn{display:none}.menu-btn{display:block}.mobile-panel{display:flex;position:fixed;inset:72px 16px auto 16px;background:#fffaf0;border:1px solid #edf0df;border-radius:24px;padding:18px;box-shadow:0 20px 70px rgba(71,61,38,.14);flex-direction:column;gap:14px}.mobile-panel a{text-decoration:none;color:#25321f;font-weight:700}.mobile-panel button{display:block;width:100%}}
+        @media(max-width:820px){.nav-links,.book-btn{display:none}.menu-btn{display:block}.mobile-panel{display:flex;position:fixed;inset:72px 16px auto 16px;background:#fffaf0;border:1px solid #edf0df;border-radius:24px;padding:18px;box-shadow:0 20px 70px rgba(71,61,38,.14);flex-direction:column;gap:14px;z-index:1100}.mobile-panel a{text-decoration:none;color:#25321f;font-weight:700}.mobile-panel button{display:block;width:100%}}
       `}</style>
       <header className={`nav-wrap ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-inner">
