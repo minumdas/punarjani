@@ -168,6 +168,10 @@ export default function Team() {
               <p className="team-bio">
                 Under the expert guidance of Dr. Swapna Venugopalan, our dedicated team of therapists and Ayurvedic professionals work together to provide authentic, classical Kerala Ayurveda. We believe in personalized care, taking the time to understand your unique constitution and creating a nurturing environment for your healing journey.
               </p>
+              <div style={{color:'#b9b9b9',fontSize:'1rem',lineHeight:1.8,marginBottom:'1.5rem'}}>
+                <strong style={{color:'#ffffff',fontWeight:700}}>Managing Director:</strong> Ajith Palayil<br/>
+                <strong style={{color:'#ffffff',fontWeight:700}}>Therapist:</strong> Sarath
+              </div>
               <span className="team-badge">Authentic Kerala Tradition</span>
             </motion.div>
           </div>
