@@ -230,7 +230,7 @@ export default function Hero() {
           </div>
           <GlowingHerbVisual />
         </div>
-        <div className="stats-strip">{[["25+","Years of Healing"],["5000+","Lives Transformed"],["40+","Ayurvedic Remedies"],["3","Specialised Divisions"]].map(([n,l])=><div className="stat-story" key={l}><b>{n}</b><span>{l}</span></div>)}</div>
+        <div className="stats-strip">{[["15+","Years of Healing"],["5000+","Lives Transformed"],["40+","Ayurvedic Remedies"],["3","Specialised Divisions"]].map(([n,l])=><div className="stat-story" key={l}><b>{n}</b><span>{l}</span></div>)}</div>
       </section>
     </>
   );
