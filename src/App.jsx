@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
-import Events from './components/Events'
 import Videos from './components/Videos'
 import About from './components/About'
 import Facility from './components/Facility'
@@ -25,7 +24,6 @@ function App() {
       <Hero />
       <Services />
       <Gallery />
-      <Events />
       <Videos />
       <About />
       <Facility />

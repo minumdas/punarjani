@@ -15,7 +15,7 @@ const PanchakarmaJourney = () => {
         <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '28px', color: '#26321f', margin: 0 }}>The Panchakarma Journey</h3>
         <p style={{ color: '#707661', fontSize: '15px' }}>Five steps to complete purification and renewal</p>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', maxWidth: '800px', margin: '0 auto' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', position: 'relative', maxWidth: '800px', margin: '0 auto', gap: '12px' }}>
         {/* Connecting Line */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -26,7 +26,7 @@ const PanchakarmaJourney = () => {
         />
         
         {steps.map((step, i) => (
-          <div key={step.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 2 }}>
+          <div key={step.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 2, minWidth: '90px' }}>
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -64,6 +64,53 @@ export default function Treatments() {
     ["Nasyam", "Nasal Therapy", "Medicated oils through nasal passages for head and respiratory issues.", "30–45 min"],
     ["Kati Vasti", "Spinal Therapy", "Warm medicated oil retained on lower back for spinal concerns.", "45 min"],
   ];
+
+  const specialisedCare = [
+    {
+      title: "Psoriasis Treatment",
+      description: "We offer you best Psoriasis Treatment in Kerala, exploiting from the benefits of traditional Kerala ayurvedic treatment.",
+    },
+    {
+      title: "Women's Health",
+      description: "Ayurvedic treatment is available for diseases such as infertility, vaginal discharge, menstrual problems, PCOD, PID, uterine tumors, uterine displacement, cancer, infertility, and subsequent hormonal disorders in those who have undergone surgery to remove the uterus or ovaries.",
+    },
+    {
+      title: "Complete Care for Mother & Child (Prasava Raksha)",
+      description: "Punarjani special treatment program ensuring postnatal care for Mother & Child After Delivery. Treatment is formulated in a special way in which ensures revitalization of energy and prevention from future health complications for both Mother & Child and common health problems which may arise after delivery.",
+    },
+    {
+      title: "Varicose Vein Treatment",
+      description: "Ayurvedic medicine has been used to address a variety of health problems for ages. Varicose veins are one of them. Veins that have swelled and twisted are known as varicose veins. They are most common in the legs. Ayurvedic treatment for varicose veins includes a variety of therapies, including traditional medicines and lifestyle changes.",
+    },
+    {
+      title: "Stroke Treatment",
+      description: "The condition of Stroke or Paralysis is a disease that affects the arteries leading to and within the brain.",
+    },
+    {
+      title: "Physiotherapy",
+      description: "Our Physiotherapy treatments help heal and prevent the injuries that stop you from leading an active life.",
+    },
+    {
+      title: "Parkinsons Disease",
+      description: "Kerala Ayurveda treatment can provide better cure for Parkinson disease treatment with quality follow ups.",
+    },
+    {
+      title: "Cerebral Palsy",
+      description: "Cerebral palsy illness is the leading cause of childhood disability affecting function and development.",
+    },
+    {
+      title: "Cervical Spondylosis",
+      description: "Punarjani Ayurveda Heritage centre offers very effective and long lasting Ayurvedic Treatment for Cervical Spondylosis in Kerala.",
+    },
+    {
+      title: "Multiple Sclerosis",
+      description: "Punarjani Ayurveda Heritage centre provides result oriented ayurvedic treatment for Multiple Sclerosis problem.",
+    },
+    {
+      title: "Muscular Dystrophy",
+      description: "Ayurvedic treatment for muscular dystrophy ensure you better life in future with effective treatment methods.",
+    },
+  ];
   
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 50, rotate: -10 },
@@ -98,7 +145,11 @@ export default function Treatments() {
         .poster-card { border-radius: 24px; overflow: hidden; box-shadow: 0 30px 60px rgba(92, 72, 38, 0.15); transition: transform 0.4s ease, box-shadow 0.4s ease; cursor: pointer; }
         .poster-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 40px 80px rgba(92, 72, 38, 0.25); }
         .poster-card img { width: 100%; display: block; object-fit: cover; }
-        @media(max-width:900px){.treat-grid{grid-template-columns:1fr 1fr}.posters-grid{grid-template-columns:1fr; gap: 20px}}@media(max-width:560px){.treat-grid{grid-template-columns:1fr}}
+        .special-grid { max-width: 1180px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .special-card { min-height: 230px; padding: 26px; background: #fff; border: 1px solid #edf0df; border-radius: 30px; box-shadow: 0 20px 50px rgba(92, 72, 38, 0.08); }
+        .special-card h4 { margin: 0 0 12px; font-family: Georgia, serif; font-size: 22px; color: #26321f; }
+        .special-card p { margin: 0; color: #6f735f; line-height: 1.7; font-size: 15px; }
+        @media(max-width:900px){.treat-grid{grid-template-columns:1fr 1fr}.posters-grid{grid-template-columns:1fr; gap: 20px}.special-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.treat-grid{grid-template-columns:1fr}.special-grid{grid-template-columns:1fr}}
       `}</style>
       <section className="treat-story" id="treatments">
         <div className="head">
@@ -155,6 +206,27 @@ export default function Treatments() {
           >
             <img src="/joint-pain-poster.png" alt="Relief for Joint Pain" />
           </motion.div>
+        </div>
+
+        <div className="head" style={{ marginTop: '60px', marginBottom: '20px' }}>
+          <span>Specialised Treatments</span>
+          <h2>Condition <em>care</em></h2>
+        </div>
+
+        <div className="special-grid">
+          {specialisedCare.map((item, idx) => (
+            <motion.div
+              className="special-card"
+              key={item.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: idx * 0.05 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
     </>

@@ -394,7 +394,15 @@ export default function Services() {
                 </div>
               )}
 
-              <button className="cta">Learn More & Book</button>
+              <a
+                className="cta"
+                href="/Broucher%20Punarjani.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span style={{ marginRight: 10 }}>📄</span>
+                View Brochure
+              </a>
             </motion.div>
           </AnimatePresence>
         </div>
