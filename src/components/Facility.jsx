@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+const base = import.meta.env.BASE_URL;
 
 export default function Facility() {
   return (
@@ -94,7 +95,7 @@ export default function Facility() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <img src="/hospital-front.jpg" alt="Punarjani Ayurveda Hospital Front" className="facility-img img-large" />
+              <img src={base + 'hospital-front.jpg'} alt="Punarjani Ayurveda Hospital Front" className="facility-img img-large" />
             </motion.div>
             
             <motion.div
@@ -104,7 +105,7 @@ export default function Facility() {
               viewport={{ once: true, margin: "-100px" }}
               style={{ display: "flex", flexDirection: "column", gap: "20px" }}
             >
-              <img src="/hospital-side.jpg" alt="Punarjani Ayurveda Hospital Side View" className="facility-img img-small" />
+              <img src={base + 'hospital-side.jpg'} alt="Punarjani Ayurveda Hospital Side View" className="facility-img img-small" />
               
               <div style={{ background: "rgba(255, 255, 255, 0.6)", padding: "20px", borderRadius: "16px", border: "1px solid #edf0df", display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
                 <span style={{ background: "#dbe6c7", color: "#3d4a31", padding: "6px 12px", borderRadius: "20px", fontSize: "14px", fontWeight: "bold" }}>❄️ A/C Speciality Rooms</span>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+const base = import.meta.env.BASE_URL;
 import { motion, AnimatePresence } from "framer-motion";
 
 const BreathingCircle = () => (
@@ -396,7 +397,7 @@ export default function Services() {
 
               <a
                 className="cta"
-                href="/Broucher%20Punarjani.pdf"
+                href={base + 'Broucher%20Punarjani.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
               >

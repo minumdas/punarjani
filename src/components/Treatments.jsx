@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+const base = import.meta.env.BASE_URL;
 
 const PanchakarmaJourney = () => {
   const steps = [
@@ -194,7 +195,7 @@ export default function Treatments() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <img src="/arthritis-poster.png" alt="Rheumatoid Arthritis Treatment" />
+            <img src={base + 'arthritis-poster.png'} alt="Rheumatoid Arthritis Treatment" />
           </motion.div>
           
           <motion.div 
@@ -204,7 +205,7 @@ export default function Treatments() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <img src="/joint-pain-poster.png" alt="Relief for Joint Pain" />
+            <img src={base + 'joint-pain-poster.png'} alt="Relief for Joint Pain" />
           </motion.div>
         </div>
 

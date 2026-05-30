@@ -1,4 +1,5 @@
 export default function Footer() {
+  const base = import.meta.env.BASE_URL;
   const PRIMARY = "+919744499119";
   const SECONDARY = "+919645063222";
   const INSTAGRAM1 = "https://www.instagram.com/punarjaniayurvedhahospital/";
@@ -23,7 +24,7 @@ export default function Footer() {
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5-1.5a1 1 0 110 2 1 1 0 010-2z"/></svg>
           </a>
         </div>
-        <a href="/admin" style={{marginTop:16,color:'#d6e6c9',fontWeight:700,textDecoration:'underline',fontSize:14}}>Open CMS admin</a>
+        <a href={base + 'admin'} style={{marginTop:16,color:'#d6e6c9',fontWeight:700,textDecoration:'underline',fontSize:14}}>Open CMS admin</a>
       </div>
     </footer>
   );

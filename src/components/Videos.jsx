@@ -1,8 +1,10 @@
+const base = import.meta.env.BASE_URL;
+
 const featuredVideo = {
   title: 'Explore Our Ayurvedic Hospital Facilities',
   description: 'A guided vlog showcasing the healing spaces, treatment rooms, and warm environment of our hospital.',
-  src: '/uploads/vlog.mp4',
-  poster: '/uploads/WhatsApp Image 2026-05-16 at 8.14.26 PM.jpeg'
+  src: base + 'uploads/vlog.mp4',
+  poster: base + 'uploads/WhatsApp Image 2026-05-16 at 8.14.26 PM.jpeg'
 };
 
 export default function Videos() {

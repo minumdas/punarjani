@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+const base = import.meta.env.BASE_URL;
 
 export default function Team() {
   return (
@@ -153,7 +154,7 @@ export default function Team() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <img src="/team-photo.png" alt="Punarjani Ayurveda Team with Dr. Swapna Venugopalan" />
+              <img src={base + 'team-photo.png'} alt="Punarjani Ayurveda Team with Dr. Swapna Venugopalan" />
             </motion.div>
 
             <motion.div 

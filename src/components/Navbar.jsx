@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+const base = import.meta.env.BASE_URL;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +35,7 @@ export default function Navbar() {
       `}</style>
       <header className={`nav-wrap ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-inner">
-          <a className="brand" href="#home"><span className="brand-mark"><img src="/punarjani-logo.png" alt="Punarjani Ayurveda" /></span></a>
+          <a className="brand" href="#home"><span className="brand-mark"><img src={base + 'punarjani-logo.png'} alt="Punarjani Ayurveda" /></span></a>
           <ul className="nav-links">{links.map(l => <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>)}</ul>
           <a className="whatsapp-btn" href="https://chat.whatsapp.com/your-invite-code" target="_blank" rel="noopener noreferrer">Join WhatsApp</a>
           <button className="book-btn" onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}>Book Consultation</button>

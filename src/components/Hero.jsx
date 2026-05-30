@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+const base = import.meta.env.BASE_URL;
 
 const HeroAnimations = () => {
   return (
@@ -124,7 +125,7 @@ const GlowingHerbVisual = () => {
           
           {/* The generated Uruli Bowl Image */}
           <img 
-            src="/uruli.png" 
+            src={base + 'uruli.png'} 
             alt="Ayurvedic Uruli Bowl" 
             style={{
               width: '100%',
