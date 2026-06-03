@@ -37,12 +37,12 @@ export default function Navbar() {
         <div className="nav-inner">
           <a className="brand" href="#home"><span className="brand-mark"><img src={base + 'punarjani-logo.png'} alt="Punarjani Ayurveda" /></span></a>
           <ul className="nav-links">{links.map(l => <li key={l}><a href={`#${l.toLowerCase()}`}>{l}</a></li>)}</ul>
-          <a className="whatsapp-btn" href="https://chat.whatsapp.com/your-invite-code" target="_blank" rel="noopener noreferrer">Join WhatsApp</a>
+          <a className="whatsapp-btn" href="https://chat.whatsapp.com/Gu1dlS7LfsYJjbQ88B9qwQ?s=sh&p=a&mlu=1" target="_blank" rel="noopener noreferrer">Join WhatsApp</a>
           <button className="book-btn" onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}>Book Consultation</button>
           <button className="menu-btn" onClick={() => setOpen(!open)}>☰</button>
         </div>
       </header>
-      <div className={`mobile-panel${open ? " open" : ""}`} onClick={() => setOpen(false)}>{links.map(l => <a key={l} href={`#${l.toLowerCase()}`}>{l}</a>)}<a className="whatsapp-btn" href="https://chat.whatsapp.com/your-invite-code" target="_blank" rel="noopener noreferrer">Join WhatsApp</a><button className="book-btn" onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}>Book Consultation</button></div>
+      <div className={`mobile-panel${open ? " open" : ""}`} onClick={() => setOpen(false)}>{links.map(l => <a key={l} href={`#${l.toLowerCase()}`}>{l}</a>)}<a className="whatsapp-btn" href="https://chat.whatsapp.com/Gu1dlS7LfsYJjbQ88B9qwQ?s=sh&p=a&mlu=1" target="_blank" rel="noopener noreferrer">Join WhatsApp</a><button className="book-btn" onClick={() => (window.location.href = `tel:${PHONE_NUMBER}`)}>Book Consultation</button></div>
     </>
   );
 }
